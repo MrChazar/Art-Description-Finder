@@ -3,7 +3,7 @@ import torch
 import config.data.data_base_config_chroma as db
 
 # Sentences we want sentence embeddings for
-sentences = ['This is an example sentence']
+sentences = ["Nestled among towering pines, the tranquil lake reflects the clear blue sky, offering a serene escape from the bustling world beyond. Its shores, peppered with cozy cabins, invite nature lovers to revel in peaceful solitude."]
 
 # Load model from HuggingFace Hub
 tokenizer = AutoTokenizer.from_pretrained('sentence-transformers-testing/stsb-bert-tiny-safetensors')
@@ -28,8 +28,8 @@ embeddings = mean_pooling(model_output, encoded_inputs['attention_mask'])
 # Convert embeddings to list
 embeddings = embeddings.tolist()
 
-# Save embeddings to database
-db.add_data_to_collection(sentences, embeddings, "test_table_7")
+# Add data to collection
+db.add_data_to_collection(sentences, "test_b", [{"chapter": "1"}], ["id1"], embeddings=embeddings)
 
-# Query database
-print(db.query_collection("test_table_7", sentences[0]))
+# Query collection
+print(db.query_collection("test_a", "among", 1))
