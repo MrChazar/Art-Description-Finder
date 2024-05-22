@@ -3,7 +3,7 @@ import chromadb
 from chromadb import EmbeddingFunction, Documents, Embeddings
 from chromadb.config import Settings
 
-client = chromadb.PersistentClient(path="data/chroma_db")
+client = chromadb.PersistentClient(path="data_pickle/chroma_db")
 
 
 def add_data_to_collection(document, table_name, metadata, ida, embeddings):
