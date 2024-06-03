@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+#navbar {
+    margin-bottom: 20px;
+}
+
+#footer {
+    bottom: 0;
+}
+
+.nav-link.active {
+    color: green !important;
+}
