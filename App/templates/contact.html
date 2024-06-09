@@ -19,13 +19,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/">Główna <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/tutorial">Jak korzystać?</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/contact">Kontakt</a>
                     </li>
                 </ul>
@@ -33,27 +33,10 @@
         </div>
 
         <div id="content" class="d-flex justify-content-center align-items-center flex-grow-1 min-vh-100">
-            <form class="text-center border border-primary rounded p-4" action="/submit" method="POST">
-                <h2>Zapytanie</h2>
-                <div class="form-group">
-                    <label for="prompt">Szukaj</label>
-                    <textarea class="form-control" id="prompt" name="prompt" rows="3" placeholder="Wpisz treść..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Wyślij</button><br>
-
-            </form>
+            <h1>Formularz Kontaktowy</h1>
         </div>
 
-        {% if result %}
-            <div id="result" class="d-flex flex-column justify-content-center m-3 align-items-center border border-black bg-primary text-light rounded">
-                <h1>Styl: {{ ' '.join(result[0]) }}</h1>
-                <p>Opis Stylu: {{ ' '.join(result[1]) }}</p>
-                <p>Nazwa Gry: {{ result[2] }}</p>
-                <p>Opis Gry: {{ result[3] }}</p>
-            </div>
-        {% endif %}
-
-        <div id="footer" class="d-flex flex-column justify-content-center align-items-center border-top border-primary py-3 bg-light mt-auto">
+        <div id="footer" class="d-flex justify-content-center align-items-center border-top border-primary py-3 bg-light mt-auto">
             <p>Wykonali: MrChazar i DmytroSchyrba</p>
         </div>
     </div>

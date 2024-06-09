@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f8f9fa;
     color: #333;
 }
@@ -12,6 +12,12 @@ body {
     bottom: 0;
 }
 
-.nav-link.active {
-    color: green !important;
+.nav-item
+{
+    color: green;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+            color: green;
 }
