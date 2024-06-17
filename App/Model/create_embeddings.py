@@ -9,7 +9,7 @@ tokenizer = BertTokenizer.from_pretrained('sentence-transformers/paraphrase-Tiny
 model = BertModel.from_pretrained('sentence-transformers/paraphrase-TinyBERT-L6-v2')
 
 # Load the model weights from the file via loading the state_dict
-model.load_state_dict(torch.load('Data/model_weights.pth'))
+# model.load_state_dict(torch.load('Data/model_weights.pth'))
 
 
 # Script that translates the text from polish to english and then tokenizes and embeds it
